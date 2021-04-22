@@ -1,18 +1,20 @@
 //
 //  ContentView.swift
-//  02-SF_Symbol
+//  SY_Symbol_01
 //
-//  Created by Nando on 20/04/21.
+//  Created by Nando on 21/04/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(systemName: "cloud.heavyrain")
+        
+        
+        Image(systemName: "cloud.rain.fill")
+            .foregroundColor(Color.blue)
             .font(.system(size: 40))
-            .foregroundColor(Color.red)
-            .shadow(color: Color.black, radius: 10, x: 10, y: 10)
+        
     }
 }
 
