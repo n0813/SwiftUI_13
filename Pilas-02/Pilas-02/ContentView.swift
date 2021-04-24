@@ -31,7 +31,8 @@ struct ContentView: View {
                     
                     
                 }
-                
+                //pavellon culiacan
+//                sistema pabellon
                 
                 
                 
