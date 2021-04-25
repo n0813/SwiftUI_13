@@ -8,34 +8,43 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    var imageName : String
+    var autorName : String
+    var cursotitulo: String
+    var precioOriginal: String
+    var precioOld : String
+    
+    
     var body: some View {
     
         VStack {
-            Image("imagen1")
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                
             
             
             HStack {
                 VStack(alignment: .leading) {
                     
-                    Text("Fernando R. Camarillo")
+                    Text(autorName)
                         .font(.headline)
                         .foregroundColor(.secondary)
                     
-                    Text("Curso de python 2021")
+                    Text(cursotitulo)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .lineLimit(2)
                     
                     HStack {
-                        Text("$10.99")
+                        Text(precioOriginal)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                         
                         
-                        Text("$10.99")
+                        Text(precioOld)
                             .font(.caption)
                             .foregroundColor(.secondary)
                             .strikethrough()
@@ -45,8 +54,8 @@ struct CardView: View {
                 Spacer()
             }.padding()
             
-        }.cornerRadius(10)
-        .overlay(RoundedRectangle(cornerRadius: 10).stroke()).padding()
+        }.cornerRadius(10).padding(10)
+        //.overlay(RoundedRectangle(cornerRadius: 10).stroke()).padding()
         
             
         
@@ -56,6 +65,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(imageName: "imagen2", autorName: "Fernando", cursotitulo: "Curso de prueba", precioOriginal: "$10.99", precioOld: "$30.99")
     }
 }
